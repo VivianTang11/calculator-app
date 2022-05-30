@@ -10,10 +10,24 @@
   <title>Frontend Mentor | Calculator app</title>
 
 </head>
-<body>
+<body data-theme="one">
   <header>
-    <section class="logo">calc</section>
-    <section class="theme">theme</section>
+    <section class="logo-section">calc</section>
+    <section class="theme-section">
+      <div class="theme-title">
+        <p>theme</p>
+      </div>
+      <div class="theme">
+        <div class="theme-numbers">
+          <p>1</p><p>2</p><p>3</p>
+        </div>
+        <div class="tri-state-toggle">
+          <input class="toggle" type="radio" name="toggle" id="one" />
+          <input class="toggle" type="radio" name="toggle" id="two" />
+          <input class="toggle" type="radio" name="toggle" id="three" />
+        </div>
+      </div>
+    </section>
   </header>
 
   <main>
@@ -29,15 +43,15 @@
         <button class="number">4</button>
         <button class="number">5</button>
         <button class="number">6</button>
-        <button class="operator">+</button>
+        <button class="operator" value="+">+</button>
         <button class="number">1</button>
         <button class="number">2</button>
         <button class="number">3</button>
-        <button class="operator">-</button>
+        <button class="operator" value="-">-</button>
         <button class="number">.</button>
         <button class="number">0</button>
-        <button class="operator">/</button>
-        <button class="operator">x</button>
+        <button class="operator" value="/">/</button>
+        <button class="operator" value="*">x</button>
         <button class="reset">reset</button>
         <button class="equal">=</button>
       </div>
@@ -46,7 +60,7 @@
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/VivianTang11/calculator-app">Vivian Tang</a>.
   </footer>
   <script src="./script.js"></script>
 </body>

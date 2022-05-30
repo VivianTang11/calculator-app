@@ -1,59 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-:root{
+body[data-theme="one"] {
+    --mainbackground: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --key-reset-del: hsl(225, 21%, 49%);
+    --key-reset-del-shadow: hsl(224, 28%, 35%);
+  
+    --toggle-circle: hsl(6, 63%, 50%);
+    --key-equal: hsl(6, 63%, 50%);
+    --key-equal-shadow: hsl(6, 70%, 34%);
+  
+    --keypad-background: hsl(223, 31%, 20%);
+
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+  
+    --text-btn: hsl(221, 14%, 31%);
+    --text-reset-del: White;
+    --text-equal: White;
+    --text-main: White;
+  }
+  
+  body[data-theme="two"] {
+    --mainbackground: hsl(0, 0%, 90%);
+    --toggle-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    --key-reset-del: rgb(26, 161, 158);
+    --key-reset-del-shadow: hsl(185, 58%, 25%);
+  
+    --toggle-circle: hsl(25, 98%, 40%);
+    --key-equal: hsl(25, 98%, 40%);
+    --key-equal-shadow: hsl(25, 99%, 27%);
+  
+    --keypad-background: hsl(0, 5%, 81%);
+
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+  
+    --text-reset-del: White;
+    --text-equal: White;
+    --text-main: hsl(198, 20%, 13%);
+  
+  }
+  
+  body[data-theme="three"] {
+    --mainbackground: hsl(268, 75%, 9%);
+    --toggle-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    --key-reset-del: hsl(281, 89%, 26%);
+    --key-reset-del-shadow: hsl(290, 70%, 36%);
     
-/*    #### Backgrounds*/
+    --toggle-circle: hsl(176, 100%, 44%);
+    --key-equal: hsl(176, 100%, 44%);
+    --key-equal-shadow: hsl(177, 92%, 70%);
     
---main-bg1: hsl(222, 26%, 31%);
---toggle-keypad-bg1: hsl(223, 31%, 20%);
---screen-bg1: hsl(0, 0%, 0%);
-
---main-bg2: hsl(0, 0%, 90%);
---toggle-keypad-bg2: hsl(0, 5%, 81%);
---screen-bg2: hsl(0, 0%, 93%);
-
---main-bg3: hsl(268, 75%, 9%);
---toggle-keypad-screen-bg2:hsl(268, 71%, 12%);
+    --keypad-background: hsl(268, 71%, 12%);
     
-    /* #### Keys */
-    
---key-blue1: hsl(225, 21%, 49%);
---key-shadow-blue1: hsl(224, 28%, 35%);
---key-toggle-red1: hsl(6, 63%, 50%);
---key-shadow-red1: hsl(6, 70%, 34%);
---key-orange1: hsl(30, 25%, 89%);
---key-shadow-orange1: hsl(28, 16%, 65%);
-
-
---key-cyran2: hsl(185, 42%, 37%);
---key-shadow-cyran2: hsl(185, 58%, 25%);
---key-bg-toggle2: hsl(25, 98%, 40%);
---key-shadow2: hsl(25, 99%, 27%);
---key-yellow2: hsl(45, 7%, 89%);
---key-shadow-orange2: hsl(35, 11%, 61%);
-
-
---key-bg-violet3: hsl(281, 89%, 26%);
---key-shadow-magenta3: hsl(285, 91%, 52%);
---key-bg-toggle-cyan3: hsl(176, 100%, 44%);
---key-shadow-cyan3: hsl(177, 92%, 70%);
---key-violett3: hsl(268, 47%, 21%);
---key-shadow-magenta3: hsl(290, 70%, 36%);
-
-    
-    /* #### Text */
-    
---text-blue1: hsl(221, 14%, 31%);
---text-white1: hsl(0, 0, 100%);
-
---text-yellow2: hsl(60, 10%, 19%);
---text-white2: hsl(0, 0, 100%);
-
---text-yellow3: hsl(52, 100%, 62%);
---text-blue3: hsl(198, 20%, 13%);
---text-white3: hsl(0, 0, 100%);
-
-}
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow: hsl(281, 89%, 26%);
+  
+    --text-reset-del: White;
+    --text-equal: hsl(198, 20%, 13%);
+    --text-main: hsl(52, 100%, 62%);
+  
+  }
 
 
 *{
@@ -67,17 +78,76 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background-color: var(--main-bg1);
+    width: 100vw;
+    position: relative;
+    background-color: var(--mainbackground);
+    color: var(--text-main);
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    color: white;
-    font-weight: 700;
-    padding: 1.5rem;
+    align-items: center;
+    padding: 2rem 1.5rem;
     font-size: 28px;
+    letter-spacing: 0.1rem;
 }
+
+
+.theme-section, .theme-numbers, .theme{
+    display: flex;
+}
+
+.theme{
+    flex-direction: column;
+    align-items: center;
+}
+.theme-section{
+    align-items: flex-end;
+}
+.theme-title{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-right: 1rem;
+}
+.theme-numbers{
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    height: 15px;
+    width: 15px;
+    appearance: none;
+    background-color: var(--toggle-circle);
+    border-radius: 50%;
+    opacity: 0;
+}
+input:hover {
+    cursor: pointer;
+}
+.tri-state-toggle {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--toggle-background);
+    padding: 0.3rem;
+}
+#one {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
 
 main{
     padding: 1.5rem;
@@ -85,11 +155,10 @@ main{
 
 
 .display-section > .display-screen{
-    color: white;
-    background-color: var(--toggle-keypad-bg1);
+    background-color: var(--screen-background);
     font-weight: 700;
-    font-size: 32px;
-    padding: 1.5rem;
+    font-size: 36px;
+    padding: 2rem 1.5rem;
     text-align: right;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
@@ -99,59 +168,58 @@ main{
 
 .calculator-section{
     padding: 1.5rem;
-    background-color: var(--toggle-keypad-bg1);
+    background-color: var(--keypad-background);
     border-radius: 0.5rem;
 }
 
 .calculator-section > .calculator-screen{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
 button{
-    padding: 0.8rem 0.5rem;
+    font-family: 'League Spartan', sans-serif;
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
     text-transform: uppercase;
     font-size: 32px;
-    font-weight: 700;
-    color: var(--text-blue1);
+    color: var(--text-btn);
     border-radius: 0.5rem;
     border: none;
 }
 .number, .operator{
-    background-color: var(--key-orange1);
-    box-shadow: 0px 3px var(--key-shadow-orange1);
+    background-color: var(--key-background);
+    box-shadow: 0px 3px var(--key-shadow);
 }
 .reset, .del{
-    color: white;
-    background-color: var(--key-blue1);
-    box-shadow: 0px 3px var(--key-shadow-blue1);
-    font-size: 18px;
+    color: var(--text-reset-del);
+    background-color: var(--key-reset-del);
+    box-shadow: 0px 3px var(--key-reset-del-shadow);
+    font-size: 20px;
+}
+.reset, .equal{
+    padding: 1.5rem;
 }
 .reset{
     grid-area: 5 / 1 / 6 / 3;
 }
 .equal{
     grid-area: 5 / 3 / 6 / 5; 
-    color: white;
-    background-color: var(--key-toggle-red1);
-    box-shadow: 0px 3px var(--key-shadow-red1);
-    font-size: 12px;
-    
+    color: var(--text-equal);
+    background-color: var(--key-equal);
+    box-shadow: 0px 3px var(--key-equal-shadow);
+    font-size: 20px;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: hsl(0, 0%, 0%); 
+}
+.attribution a { 
+    color: hsl(0, 0%, 0%); 
+}
 
 
-/* # Front-end Style Guide
 
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-*/
