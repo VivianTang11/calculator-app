@@ -1,3 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    
+/*    #### Backgrounds*/
+    
+--main-bg1: hsl(222, 26%, 31%);
+--toggle-keypad-bg1: hsl(223, 31%, 20%);
+--screen-bg1: hsl(0, 0%, 0%);
+
+--main-bg2: hsl(0, 0%, 90%);
+--toggle-keypad-bg2: hsl(0, 5%, 81%);
+--screen-bg2: hsl(0, 0%, 93%);
+
+--main-bg3: hsl(268, 75%, 9%);
+--toggle-keypad-screen-bg2:hsl(268, 71%, 12%);
+    
+    /* #### Keys */
+    
+--key-blue1: hsl(225, 21%, 49%);
+--key-shadow-blue1: hsl(224, 28%, 35%);
+--key-toggle-red1: hsl(6, 63%, 50%);
+--key-shadow-red1: hsl(6, 70%, 34%);
+--key-orange1: hsl(30, 25%, 89%);
+--key-shadow-orange1: hsl(28, 16%, 65%);
+
+
+--key-cyran2: hsl(185, 42%, 37%);
+--key-shadow-cyran2: hsl(185, 58%, 25%);
+--key-bg-toggle2: hsl(25, 98%, 40%);
+--key-shadow2: hsl(25, 99%, 27%);
+--key-yellow2: hsl(45, 7%, 89%);
+--key-shadow-orange2: hsl(35, 11%, 61%);
+
+
+--key-bg-violet3: hsl(281, 89%, 26%);
+--key-shadow-magenta3: hsl(285, 91%, 52%);
+--key-bg-toggle-cyan3: hsl(176, 100%, 44%);
+--key-shadow-cyan3: hsl(177, 92%, 70%);
+--key-violett3: hsl(268, 47%, 21%);
+--key-shadow-magenta3: hsl(290, 70%, 36%);
+
+    
+    /* #### Text */
+    
+--text-blue1: hsl(221, 14%, 31%);
+--text-white1: hsl(0, 0, 100%);
+
+--text-yellow2: hsl(60, 10%, 19%);
+--text-white2: hsl(0, 0, 100%);
+
+--text-yellow3: hsl(52, 100%, 62%);
+--text-blue3: hsl(198, 20%, 13%);
+--text-white3: hsl(0, 0, 100%);
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: var(--main-bg1);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 700;
+    padding: 1.5rem;
+    font-size: 28px;
+}
+
+main{
+    padding: 1.5rem;
+}
+
+
+.display-section > .display-screen{
+    color: white;
+    background-color: var(--toggle-keypad-bg1);
+    font-weight: 700;
+    font-size: 32px;
+    padding: 1.5rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+
+.calculator-section{
+    padding: 1.5rem;
+    background-color: var(--toggle-keypad-bg1);
+    border-radius: 0.5rem;
+}
+
+.calculator-section > .calculator-screen{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 0.6rem;
+}
+
+button{
+    padding: 0.8rem 0.5rem;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-blue1);
+    border-radius: 0.5rem;
+    border: none;
+}
+.number, .operator{
+    background-color: var(--key-orange1);
+    box-shadow: 0px 3px var(--key-shadow-orange1);
+}
+.reset, .del{
+    color: white;
+    background-color: var(--key-blue1);
+    box-shadow: 0px 3px var(--key-shadow-blue1);
+    font-size: 18px;
+}
+.reset{
+    grid-area: 5 / 1 / 6 / 3;
+}
+.equal{
+    grid-area: 5 / 3 / 6 / 5; 
+    color: white;
+    background-color: var(--key-toggle-red1);
+    box-shadow: 0px 3px var(--key-shadow-red1);
+    font-size: 12px;
+    
+}
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -11,87 +154,4 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
-
-### Theme 1
-
-#### Backgrounds
-
-- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
-- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
-- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
-
-#### Keys
-
-- Desaturated dark blue (key background): hsl(225, 21%, 49%)
-- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
-
-- Red (key background, toggle): hsl(6, 63%, 50%)
-- Dark red (key shadow): hsl(6, 70%, 34%)
-
-- Light grayish orange (key background): hsl(30, 25%, 89%)
-- Grayish orange (key shadow): hsl(28, 16%, 65%)
-
-#### Text
-
-- Very dark grayish blue: hsl(221, 14%, 31%)
-- White: hsl(0, 0, 100%)
-
-### Theme 2
-
-#### Backgrounds
-
-- Light gray (main background): hsl(0, 0%, 90%)
-- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
-- Very light gray (screen background): hsl(0, 0%, 93%)
-
-#### Keys
-
-- Dark moderate cyan (key background): hsl(185, 42%, 37%)
-- Very dark cyan (key shadow): hsl(185, 58%, 25%)
-
-- Orange (key background, toggle): hsl(25, 98%, 40%)
-- Dark orange (key shadow): hsl(25, 99%, 27%)
-
-- Light grayish yellow (key background): hsl(45, 7%, 89%)
-- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
-
-#### Text
-
-- Very dark grayish yellow: hsl(60, 10%, 19%)
-- White (text): hsl(0, 0, 100%)
-
-### Theme 3
-
-#### Backgrounds
-
-- Very dark violet (main background): hsl(268, 75%, 9%)
-- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
-
-#### Keys
-
-- Dark violet (key background): hsl(281, 89%, 26%)
-- Vivid magenta (key shadow): hsl(285, 91%, 52%)
-
-- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
-- Soft cyan (key shadow): hsl(177, 92%, 70%)
-
-- Very dark violet (key background): hsl(268, 47%, 21%)
-- Dark magenta (key shadow): hsl(290, 70%, 36%)
-
-#### Text
-
-- Light yellow: hsl(52, 100%, 62%)
-- Very dark blue: hsl(198, 20%, 13%)
-- White (text): hsl(0, 0, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size (numbers): 32px
-
-### Font
-
-- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-- Weights: 700 */
+*/
