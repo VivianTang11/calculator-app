@@ -1,9 +1,10 @@
 const displayScreen = document.querySelector('.display-screen')
 const numberBtns = document.querySelectorAll('.number')
 const operatorBtns = document.querySelectorAll('.operator')
-const delBtn = document.querySelectorAll('.del')
-const resetBtn = document.querySelectorAll('.reset')
-const equalBtn = document.querySelectorAll('.equal')
+const delBtn = document.querySelector('.del')
+const resetBtn = document.querySelector('.reset')
+const equalBtn = document.querySelector('.equal')
+const buttons = document.querySelectorAll('.buttons')
 
 
 const bodyElem = document.querySelector("body");
@@ -34,4 +35,28 @@ const toggleTheme = () => {
     });
 }
 
+const clickedBtns = () => {
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            op = btn.textContent
+            display(op)
+        })
+    })
+}
+
+let text = ''
+const display = (op) => {
+    text += op
+    displayScreen.innerHTML = `${text}`
+    return text
+}
+
+const calculate = () => {
+    equalBtn.addEventListener('click', () => {
+        console.log(display(op));
+    })
+}
+
 toggleTheme()
+clickedBtns()
+calculate()
