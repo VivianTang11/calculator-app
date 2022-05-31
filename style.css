@@ -80,7 +80,6 @@ body[data-theme="three"] {
 }
 body{
     font-family: 'League Spartan', sans-serif;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
@@ -91,14 +90,13 @@ body{
 }
 
 header{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1.5rem;
     font-size: 28px;
     letter-spacing: 0.1rem;
 }
-.theme-section, .theme-numbers, .theme{
+body, header, .theme-section, .theme-numbers, .theme, .tri-state-toggle{
     display: flex;
 }
 
@@ -135,7 +133,6 @@ input:hover {
     background-color: var(--hover-toggle-circle);
 }
 .tri-state-toggle {
-    display: flex;
     justify-content: center;
     border: none;
     border-radius: 50px;
@@ -232,12 +229,9 @@ button{
     .logo-section{
         margin-right: 18rem;
     }
-
     button{
         padding: 1.2rem 2rem 0.7rem 2rem;
     }
-
-
     .calculator-section > .calculator-screen {
         gap: 1.5rem;
     }
