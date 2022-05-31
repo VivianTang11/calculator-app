@@ -12,29 +12,29 @@
 </head>
 <body data-theme="one">
   <header>
-    <section class="logo-section">calc</section>
-    <section class="theme-section">
+    <div class="logo-section"><h2>calc</h2></div>
+    <div class="theme-section">
       <div class="theme-title">
-        <p>theme</p>
+        <h4>theme</h4>
       </div>
       <div class="theme">
         <div class="theme-numbers">
-          <p>1</p><p>2</p><p>3</p>
+          <p id="1">1</p><p id="2">2</p><p id="3">3</p>
         </div>
         <div class="tri-state-toggle">
-          <input class="toggle" type="radio" name="toggle" id="one" />
-          <input class="toggle" type="radio" name="toggle" id="two" />
-          <input class="toggle" type="radio" name="toggle" id="three" />
+          <input class="toggle" type="radio" name="toggle" id="one" aria-labelledby="1"/>
+          <input class="toggle" type="radio" name="toggle" id="two" aria-labelledby="2"/>
+          <input class="toggle" type="radio" name="toggle" id="three" aria-labelledby="3"/>
         </div>
       </div>
-    </section>
+    </div>
   </header>
 
   <main>
-    <section class="display-section">
+    <div class="display-section">
       <div class="display-screen"></div>
-    </section>
-    <section class="calculator-section">
+    </d>
+    <div class="calculator-section">
       <div class="calculator-screen">
         <button class="button number">7</button>
         <button class="button number">8</button>
@@ -55,7 +55,7 @@
         <button class="button reset">reset</button>
         <button class="button equal">=</button>
       </div>
-    </section>
+    </div>
   </main>
   
   <footer class="attribution">
