@@ -6,14 +6,18 @@ body[data-theme="one"] {
     --screen-background: hsl(224, 36%, 15%);
     --key-reset-del: hsl(225, 21%, 49%);
     --key-reset-del-shadow: hsl(224, 28%, 35%);
+    --hover-key-reset-del: hsl(224, 27%, 60%);
   
     --toggle-circle: hsl(6, 63%, 50%);
+    --hover-toggle-circle: hsl(6, 55%, 57%);
     --key-equal: hsl(6, 63%, 50%);
     --key-equal-shadow: hsl(6, 70%, 34%);
+    --hover-key-equal: hsl(6, 55%, 57%);
   
     --keypad-background: hsl(223, 31%, 20%);
     --key-background: hsl(30, 25%, 89%);
     --key-shadow: hsl(28, 16%, 65%);
+    --hover-key-background: White;
   
     --text-btn: hsl(221, 14%, 31%);
     --text-reset-del: White;
@@ -26,14 +30,18 @@ body[data-theme="two"] {
     --screen-background: hsl(0, 0%, 93%);
     --key-reset-del: rgb(26, 161, 158);
     --key-reset-del-shadow: hsl(185, 58%, 25%);
+    --hover-key-reset-del: rgb(67, 191, 189);
 
     --toggle-circle: hsl(25, 98%, 40%);
+    --hover-toggle-circle: hsl(25, 91%, 58%);
     --key-equal: hsl(25, 98%, 40%);
     --key-equal-shadow: hsl(25, 99%, 27%);
+    --hover-key-equal: hsl(25, 91%, 58%);
 
     --keypad-background: hsl(0, 5%, 81%);
     --key-background: hsl(30, 25%, 89%);
     --key-shadow: hsl(28, 16%, 65%);
+    --hover-key-background: White;
 
     --text-reset-del: White;
     --text-equal: White;
@@ -46,13 +54,17 @@ body[data-theme="three"] {
     --screen-background: hsl(268, 71%, 12%);
     --key-reset-del: hsl(281, 89%, 26%);
     --key-reset-del-shadow: hsl(290, 70%, 36%);
+    --hover-key-reset-del: hsl(281, 59%, 49%);
   
     --toggle-circle: hsl(176, 100%, 44%);
+    --hover-toggle-circle: hsl(176, 100%, 68%);
     --key-equal: hsl(176, 100%, 44%);
     --key-equal-shadow: hsl(177, 92%, 70%);
+    --hover-key-equal: hsl(176, 100%, 68%);
   
     --keypad-background: hsl(268, 71%, 12%);
     --key-background: hsl(268, 47%, 21%);
+    --hover-key-background: hsl(267, 41%, 42%);
     --key-shadow: hsl(281, 89%, 26%);
 
     --text-reset-del: White;
@@ -120,6 +132,7 @@ input {
 }
 input:hover {
     cursor: pointer;
+    background-color: var(--hover-toggle-circle);
 }
 .tri-state-toggle {
     display: flex;
@@ -170,11 +183,19 @@ button{
     background-color: var(--key-background);
     box-shadow: 0px 3px var(--key-shadow);
 }
+.number:hover, .operator:hover{
+    cursor: pointer;
+    background-color: var(--hover-key-background);
+}
 .reset, .del{
     color: var(--text-reset-del);
     background-color: var(--key-reset-del);
     box-shadow: 0px 3px var(--key-reset-del-shadow);
     font-size: 20px;
+}
+.reset:hover, .del:hover{
+    cursor: pointer;
+    background-color: var(--hover-key-reset-del);
 }
 .reset, .equal{
     padding: 1.5rem;
@@ -189,14 +210,17 @@ button{
     box-shadow: 0px 3px var(--key-equal-shadow);
     font-size: 20px;
 }
-
+.equal:hover{
+    cursor: pointer;
+    background-color: var(--hover-key-equal);
+}
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    color: hsl(0, 0%, 0%); 
+    color: var(--text-main)
 }
 .attribution a { 
-    color: hsl(0, 0%, 0%); 
+    color: var(--text-main)
 }
 
 @media screen and (min-width: 600px) {
